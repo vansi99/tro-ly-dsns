@@ -1,4 +1,4 @@
-# Trợ lý DSNS — Trợ lý AI riêng trên Telegram (v1.0.0)
+# Trợ lý DSNS — Trợ lý AI riêng trên Telegram
 
 Trợ lý ấm, mộc mạc dành cho cộng đồng ĐSNS (người 35-65 tuổi, không cần biết code). Dùng Hermes + Telegram + vault Obsidian.
 

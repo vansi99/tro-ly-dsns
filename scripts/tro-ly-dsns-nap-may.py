@@ -48,7 +48,9 @@ HARD_NAME_WORDS = re.compile(
 )
 HOME = Path.home().resolve()
 # Folders too broad to scan: they usually hold personal papers.
-BROAD = {HOME, HOME / "Documents", HOME / "Desktop", HOME / "Downloads", HOME / "OneDrive"}
+BROAD = {HOME, HOME / "Documents", HOME / "Desktop", HOME / "Downloads", HOME / "Pictures",
+         HOME / "OneDrive", HOME / "OneDrive" / "Documents", HOME / "OneDrive" / "Desktop",
+         HOME / "Dropbox", HOME / "Google Drive", HOME / "iCloud Drive"}
 TEXT_EXT = {".md", ".txt"}
 DOC_EXT = {".docx", ".pdf"}
 
@@ -65,7 +67,7 @@ def load_config():
         return cfg
     key = None
     for raw in CONFIG.read_text(encoding="utf-8").splitlines():
-        line = re.sub(r"\s+#.*$|^#.*$", "", raw).rstrip()
+        line = raw.rstrip() if raw.lstrip().startswith(("- \"", "- '")) else re.sub(r"\s+#.*$|^\s*#.*$", "", raw).rstrip()
         if not line.strip():
             continue
         item = line.strip()
@@ -87,6 +89,8 @@ def load_config():
 
 def is_broad(path):
     p = path.expanduser().resolve()
+    if p.parent == Path("/Volumes") or p.parent.name == "Volumes":
+        return True
     return p in BROAD or p == Path(p.anchor) or len(p.parts) <= 2
 
 

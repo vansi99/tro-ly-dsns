@@ -26,8 +26,14 @@ Luôn viết đầy đủ "Nhân Duyên Quả".
 4. Trả lời: "Đã nạp bài <tên bài> vào Nhan-Duyen-Qua/<tên file>."
 
 ## Soạn nháp bài chia sẻ
-1. Chỉ dùng nội dung trong các file `Nhan-Duyen-Qua/*.md`. Mỗi luận điểm ghi rõ lấy từ bài nào.
-2. Không gán thêm ý ngoài bài cho tác giả. Không có bài phù hợp thì nói "Không có trong vault."
-3. Viết theo giọng trong tac-phong.md (thường xưng "mình", gọi "anh chị em"), 150–250 chữ.
-4. Kết thúc bằng dòng: "Có sự hỗ trợ của AI, cần người duyệt trước khi đăng."
+1. Chỉ dùng nội dung trong các file `Nhan-Duyen-Qua/*.md`. Không gán thêm ý ngoài bài cho tác giả. Không có bài phù hợp thì nói "Không có trong vault."
+2. Viết theo giọng trong tac-phong.md (thường xưng "mình", gọi "anh chị em"). Độ dài theo yêu cầu của người dùng; không nói thì 150–250 chữ. Đếm lại số chữ trước khi trả lời.
+3. Trả lời đúng khung sau, không bỏ dòng nào:
+   ```
+   <bài chia sẻ>
+
+   Nguồn: <đường dẫn từng bài Nhân Duyên Quả đã dùng>
+   Có sự hỗ trợ của AI, cần người duyệt trước khi đăng.
+   ```
+4. Kiểm tra lần cuối: câu trả lời phải có dòng "Có sự hỗ trợ của AI, cần người duyệt trước khi đăng." Thiếu thì thêm vào.
 5. Không gửi bài đi đâu. Hỏi người dùng có muốn lưu nháp vào `Ghi-chu/` không.
