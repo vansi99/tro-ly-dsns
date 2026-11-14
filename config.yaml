@@ -1,0 +1,35 @@
+# tro-ly-dsns: cấu hình cho workshop "Trợ lý AI riêng trên Telegram" (0đ).
+# Khoá (OPENCODE_ZEN_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_ALLOWED_USERS) nằm trong .env, không ở đây.
+
+model:
+  # Model miễn phí của OpenCode Zen, nhà cung cấp không lưu và không dùng dữ liệu để huấn luyện.
+  # Đổi model: tro-ly-dsns config set model.default deepseek-v4.1-flash-free
+  # KHÔNG dùng big-pickle, iceman, nemotron, mimo, flint, inkling: các model này dùng dữ liệu để huấn luyện.
+  default: "glm-5.3-flash-free"
+  provider: "opencode-zen"
+
+# Khi model chính hết lượt miễn phí thì chuyển lần lượt sang các model 0đ này.
+fallback_providers:
+  - provider: opencode-zen
+    model: deepseek-v4.1-flash-free
+  - provider: opencode-zen
+    model: minimax-m3.1-flash-free
+
+# Công cụ bot được dùng qua Telegram và trong lịch tự động. Không bật trình duyệt, điều khiển máy, tạo ảnh.
+platform_toolsets:
+  telegram: [clarify, file, memory, session_search, skills, terminal, todo, web]
+  cron: [file, skills, terminal, web]
+
+# Chép lời voice note ngay trên máy (local whisper), không gửi âm thanh ra ngoài.
+stt:
+  enabled: true
+  provider: "local"
+  language: "vi"
+
+# Cho script nạp máy biết vault nằm ở đâu.
+terminal:
+  env_passthrough:
+    - OBSIDIAN_VAULT_PATH
+
+cron:
+  catch_up_missed: true

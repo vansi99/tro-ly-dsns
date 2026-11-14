@@ -1,0 +1,29 @@
+name: tro-ly-dsns
+version: 1.0.0
+description: "Trợ lý AI riêng trên Telegram cho cộng đồng ĐSNS: ghi chú, hỏi lại, bản tin sáng, soạn nháp theo bài Nhân Duyên Quả. Không cần code."
+author: "DSNS / vansi99"
+license: "MIT"
+hermes_requires: ">=0.23.0"
+
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skills/
+  - scripts/
+  - cron/jobs.json
+  - distribution.yaml
+
+env_requires:
+  - name: OPENCODE_ZEN_API_KEY
+    description: "Khoá OpenCode Zen (lấy ở opencode.ai, dùng model miễn phí glm-5.3-flash-free)."
+    required: true
+  - name: TELEGRAM_BOT_TOKEN
+    description: "Token bot Telegram (tạo tại @BotFather)."
+    required: true
+  - name: TELEGRAM_ALLOWED_USERS
+    description: "User ID Telegram của chính mình (lấy từ @userinfobot). Bot chỉ trả lời người có ID này."
+    required: true
+  - name: OBSIDIAN_VAULT_PATH
+    description: "Thư mục vault ghi chú. Mặc định: ~/Documents/Tro Ly DSNS"
+    required: false
+    default: "~/Documents/Tro Ly DSNS"

@@ -1,0 +1,106 @@
+{
+  "jobs": [
+    {
+      "id": "dsns-ban-tin-sang",
+      "name": "ban-tin-sang",
+      "prompt": "Chạy skill ban-tin-sang cho ngày hôm nay (Asia/Ho_Chi_Minh). Vault: ${OBSIDIAN_VAULT_PATH}. Đọc các note mới trong Inbox/, Ghi-chu/, Nhan-Duyen-Qua/, Voice/ từ hôm qua, tóm tắt ngắn gọn 5-8 dòng tiếng Việt theo giọng trong tac-phong.md. Ghi bản tin vào Ban-tin/ và trả lời tóm tắt + đường dẫn file. Nếu không có nội dung mới thì chỉ [SILENT].",
+      "skills": [
+        "ban-tin-sang",
+        "obsidian"
+      ],
+      "skill": "ban-tin-sang",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-11-14T08:59:51.000000+00:00",
+      "paused_reason": "installed from distribution - review before enabling",
+      "created_at": "2026-11-14T08:59:51.000000+00:00",
+      "next_run_at": null,
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "telegram",
+      "origin": null,
+      "enabled_toolsets": [
+        "file",
+        "skills",
+        "terminal"
+      ],
+      "workdir": null,
+      "failure_deliver": "local",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "catch_up": false,
+      "fire_claim": null
+    },
+    {
+      "id": "dsns-nap-may",
+      "name": "nap-may-cap-nhat",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "tro-ly-dsns-nap-may.py",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * *",
+        "display": "30 6 * * *"
+      },
+      "schedule_display": "30 6 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-11-14T08:59:51.000000+00:00",
+      "paused_reason": "installed from distribution - review before enabling",
+      "created_at": "2026-11-14T08:59:51.000000+00:00",
+      "next_run_at": null,
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "failure_deliver": "local",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "catch_up": false,
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-11-14T08:59:51.000000+00:00"
+}
