@@ -25,6 +25,8 @@ stt:
   enabled: true
   provider: "local"
   language: "vi"
+  local:
+    model: "small"   # nghe tiếng Việt tốt hơn "base"; lần đầu tải khoảng 500 MB
 
 # Cho script nạp máy biết vault nằm ở đâu.
 terminal:

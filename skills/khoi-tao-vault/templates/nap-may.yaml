@@ -1,0 +1,7 @@
+# Thư mục tài liệu trợ lý được nạp. Nhắn bot "/nap-may" để thêm thư mục.
+# Không đưa cả thư mục nhà, Documents, Desktop, Downloads hay cả ổ đĩa vào đây.
+scan_paths:
+# Mẫu tên file muốn bỏ qua thêm (ngoài danh sách luôn bỏ qua có sẵn).
+exclude_globs:
+  - "*nhap*"
+max_files_per_day: 200

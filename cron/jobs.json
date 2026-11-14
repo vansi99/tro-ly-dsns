@@ -3,10 +3,9 @@
     {
       "id": "dsns-ban-tin-sang",
       "name": "ban-tin-sang",
-      "prompt": "Chạy skill ban-tin-sang cho ngày hôm nay (Asia/Ho_Chi_Minh). Vault: ${OBSIDIAN_VAULT_PATH}. Đọc các note mới trong Inbox/, Ghi-chu/, Nhan-Duyen-Qua/, Voice/ từ hôm qua, tóm tắt ngắn gọn 5-8 dòng tiếng Việt theo giọng trong tac-phong.md. Ghi bản tin vào Ban-tin/ và trả lời tóm tắt + đường dẫn file. Nếu không có nội dung mới thì chỉ [SILENT].",
+      "prompt": "Chạy skill ban-tin-sang cho hôm nay (giờ Việt Nam). Vault = giá trị biến OBSIDIAN_VAULT_PATH (lấy bằng lệnh terminal: echo \"$OBSIDIAN_VAULT_PATH\"); nếu trống dùng ~/Documents/Tro Ly DSNS. KHÔNG dùng ~/Documents/Obsidian Vault. Không có ghi chú mới trong 24 giờ qua thì trả lời đúng [SILENT].",
       "skills": [
-        "ban-tin-sang",
-        "obsidian"
+        "ban-tin-sang"
       ],
       "skill": "ban-tin-sang",
       "model": null,
@@ -49,9 +48,9 @@
         "terminal"
       ],
       "workdir": null,
-      "failure_deliver": "local",
+      "failure_deliver": "telegram",
       "timezone": "Asia/Ho_Chi_Minh",
-      "catch_up": false,
+      "catch_up": true,
       "fire_claim": null
     },
     {
@@ -92,13 +91,13 @@
       "last_delivery_unverified": null,
       "last_failure": null,
       "failure_streak": 0,
-      "deliver": "local",
+      "deliver": "telegram",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
-      "failure_deliver": "local",
+      "failure_deliver": "telegram",
       "timezone": "Asia/Ho_Chi_Minh",
-      "catch_up": false,
+      "catch_up": true,
       "fire_claim": null
     }
   ],

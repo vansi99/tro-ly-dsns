@@ -1,13 +1,23 @@
 ---
 name: ghi-voice
-description: "Xử lý voice note: STT local (nếu có), ghi transcript + file gốc vào Voice/. Dùng obsidian."
-version: 1.0.0
+description: "Lưu lời chép của voice note vào vault. Dùng khi người dùng gửi voice note hoặc tin nhắn thoại."
+version: 1.0.1
+metadata:
+  hermes:
+    tags: [vault, voice]
 ---
+
 # ghi-voice
 
-User gửi voice note trên Telegram.
+Hermes đã tự chép lời voice note trên máy trước khi tin đến em (em nhận được phần chữ và đường dẫn file âm thanh).
 
-1. Nhận audio, chạy STT local nếu cấu hình (voice.stt.local).
-2. Ghi transcript vào Voice/voice-YYYY-MM-DD.md
-3. Lưu file audio gốc (nếu gateway hỗ trợ).
-4. Trả lời: "Đã ghi voice vào Voice/..."
+1. Xác định vault theo SOUL.md. Lấy ngày giờ hiện tại.
+2. Thêm vào cuối `<vault>/Voice/<YYYY-MM-DD>.md` (chưa có thì tạo, dòng đầu `# Voice note ngày <YYYY-MM-DD>`):
+   ```
+   ## <HH:MM>
+   <phần chữ đã chép, giữ nguyên>
+   - File âm thanh: <đường dẫn, nếu có>
+   ```
+3. Nếu phần chữ rỗng hoặc vô nghĩa: báo "Em chưa nghe rõ, anh/chị gửi lại giúp em nhé." và không ghi.
+4. Nếu voice có ý "ghi lại" hay câu hỏi, làm tiếp theo skill ghi-lai hoặc hoi-vault.
+5. Trả lời: một câu tóm ý + "Đã ghi vào Voice/<YYYY-MM-DD>.md."
