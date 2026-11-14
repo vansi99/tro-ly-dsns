@@ -3,7 +3,7 @@
     {
       "id": "dsns-ban-tin-sang",
       "name": "ban-tin-sang",
-      "prompt": "Chạy skill ban-tin-sang cho hôm nay (giờ Việt Nam). Vault = giá trị biến OBSIDIAN_VAULT_PATH (lấy bằng lệnh terminal: echo \"$OBSIDIAN_VAULT_PATH\"); nếu trống dùng ~/Documents/Tro Ly DSNS. KHÔNG dùng ~/Documents/Obsidian Vault. Không có ghi chú mới trong 24 giờ qua thì trả lời đúng [SILENT].",
+      "prompt": "Chạy skill ban-tin-sang cho hôm nay (giờ Việt Nam). Vault là ~/Documents/Tro Ly DSNS (Windows: %USERPROFILE%\\Documents\\Tro Ly DSNS); KHÔNG dùng ~/Documents/Obsidian Vault. Không có ghi chú mới trong 24 giờ qua thì trả lời đúng [SILENT].",
       "skills": [
         "ban-tin-sang"
       ],

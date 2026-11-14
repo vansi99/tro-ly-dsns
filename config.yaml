@@ -28,10 +28,5 @@ stt:
   local:
     model: "small"   # nghe tiếng Việt tốt hơn "base"; lần đầu tải khoảng 500 MB
 
-# Cho script nạp máy biết vault nằm ở đâu.
-terminal:
-  env_passthrough:
-    - OBSIDIAN_VAULT_PATH
-
 cron:
   catch_up_missed: true

@@ -24,7 +24,8 @@ import unicodedata
 from datetime import datetime
 from pathlib import Path
 
-VAULT = Path(os.environ.get("OBSIDIAN_VAULT_PATH") or "~/Documents/Tro Ly DSNS").expanduser()
+# TRO_LY_DSNS_VAULT only overrides the vault in tests; learners always use the default folder.
+VAULT = Path(os.environ.get("TRO_LY_DSNS_VAULT") or "~/Documents/Tro Ly DSNS").expanduser()
 CONFIG = VAULT / "nap-may.yaml"
 OUT_DIR = VAULT / "Chi-muc-may"
 STATE = OUT_DIR / ".state.json"

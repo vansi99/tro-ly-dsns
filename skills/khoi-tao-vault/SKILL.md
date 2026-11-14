@@ -10,7 +10,7 @@ metadata:
 
 # khoi-tao-vault
 
-1. Xác định vault theo SOUL.md (biến `OBSIDIAN_VAULT_PATH`, trống thì `~/Documents/Tro Ly DSNS`).
+1. Xác định vault theo SOUL.md (`~/Documents/Tro Ly DSNS`).
 2. Thử chạy script:
    - Mac: `python3 "${HERMES_SKILL_DIR}/scripts/create-vault.py"`
    - Windows: `python "${HERMES_SKILL_DIR}/scripts/create-vault.py"`

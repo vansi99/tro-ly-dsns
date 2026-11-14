@@ -24,7 +24,6 @@ Sau khi import:
 OPENCODE_ZEN_API_KEY=sk-...          # Lấy từ opencode.ai/zen (miễn phí)
 TELEGRAM_BOT_TOKEN=123456:ABC...     # Tạo bot tại @BotFather
 TELEGRAM_ALLOWED_USERS=123456789     # User ID của bạn (dùng @userinfobot)
-OBSIDIAN_VAULT_PATH=~/Documents/Tro Ly DSNS   # tuỳ chọn, có default
 ```
 
 ## Bật gateway Telegram (sau khi điền token)
