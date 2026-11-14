@@ -32,6 +32,7 @@ OBSIDIAN_VAULT_PATH=~/Documents/Tro Ly DSNS   # tuỳ chọn, có default
 tro-ly-dsns gateway start
 # hoặc trong Desktop: Messaging → Telegram → Start gateway
 ```
+Sau đó nhắn bot `/sethome` để bản tin sáng gửi về đúng khung chat này.
 
 ## Bật cron jobs (bản tin sáng & nap máy)
 ```bash
@@ -70,20 +71,23 @@ Tro Ly DSNS/
 
 ## Lưu ý an toàn quan trọng
 
-- Tất cả dữ liệu ở **máy bạn**, không gửi lên server của ai.
-- Cron jobs được cài **paused** — bạn phải chủ động resume sau khi review.
-- Không bao giờ commit .env, auth.json, memories, sessions.
-- "Không có trong vault" = câu trả lời trung thực khi không tìm thấy.
+- Vault, chỉ mục và voice note nằm trên **máy bạn**. Voice được chép lời ngay trên máy.
+- Nội dung bạn nhắn bot và đoạn ghi chú bot đọc để trả lời **được gửi tới model trên OpenCode Zen**. Các model mặc định có chính sách không lưu và không dùng để huấn luyện, nhưng vẫn đừng gửi CCCD, số tài khoản, mật khẩu.
+- Bot chỉ trả lời user ID trong `TELEGRAM_ALLOWED_USERS`.
+- Cron jobs được cài **paused**, bạn phải tự bật sau khi xem.
+- `/nap-may` chỉ quét thư mục bạn tự chọn, luôn bỏ qua giấy tờ cá nhân và thư mục hệ thống.
+- "Không có trong vault" là câu trả lời trung thực khi không tìm thấy.
 
 ## Cập nhật distribution sau này
 
 ```bash
-tro-ly-dsns profile update   # (sau khi author push tag mới)
+hermes profile update tro-ly-dsns   # khi cài từ GitHub; giữ nguyên ghi chú, phiên chat và khoá
 ```
+Cài bằng file `.tar.gz` thì nhận file mới từ BTC và import lại; vault nằm ngoài profile nên không mất ghi chú.
 
 ---
 
-Workshop "Trợ lý AI riêng trên Telegram" — Buổi 1 • 15/11/2026 • Cộng đồng ĐSNS
+Workshop "Trợ lý AI riêng trên Telegram" • Chủ nhật 15/11 và 22/11/2026 • Cộng đồng ĐSNS
 
 ## Đổi model (sau khi import)
 
